@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottery System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lottery Ticket Purchase</h1>
+      <form id="purchase-form">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="card-element">Credit or debit card:</label>
+        <div id="card-element"></div>
+        <div id="card-errors" role="alert"></div>
+        <button type="submit">Buy Ticket</button>
+      </form>
+      <div id="receipt" style="display: none">
+        <h2>Receipt</h2>
+        <p>Thank you for your purchase, <span id="receipt-name"></span>!</p>
+        <p>Your ticket number is: <span id="ticket-number"></span></p>
+      </div>
+    </div>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
